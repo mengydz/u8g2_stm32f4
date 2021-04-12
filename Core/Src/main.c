@@ -206,9 +206,9 @@ void u8g2_box_frame(uint8_t a)
   u8g2_DrawStr(&u8g2, 0,0, "DrawBox");
   u8g2_DrawBox(&u8g2,0,15,20,10);
   u8g2_DrawBox(&u8g2,0+a,15,30,7);
-  u8g2_DrawStr(&u8g2, 0, 32, "DrawFrame");
-  u8g2_DrawFrame(&u8g2,0,15+32,20,10);
-  u8g2_DrawFrame(&u8g2,0+a,15+32,30,7);
+//  u8g2_DrawStr(&u8g2, 0, 32, "DrawFrame");
+//  u8g2_DrawFrame(&u8g2,0,15+32,20,10);
+//  u8g2_DrawFrame(&u8g2,0+a,15+32,30,7);
 }
 
 void u8g2_disc_circle(uint8_t a)
@@ -216,9 +216,9 @@ void u8g2_disc_circle(uint8_t a)
   u8g2_DrawStr(&u8g2, 0, 0, "DrawDisc");
   u8g2_DrawDisc(&u8g2,10,22,7,U8G2_DRAW_ALL);
   u8g2_DrawDisc(&u8g2,24+a,20,5,U8G2_DRAW_ALL);
-  u8g2_DrawStr(&u8g2, 0, 32, "DrawCircle");
-  u8g2_DrawCircle(&u8g2,10,22+32,7,U8G2_DRAW_ALL);
-  u8g2_DrawCircle(&u8g2,24+a,20+32,5,U8G2_DRAW_ALL);
+//  u8g2_DrawStr(&u8g2, 0, 32, "DrawCircle");
+//  u8g2_DrawCircle(&u8g2,10,22+32,7,U8G2_DRAW_ALL);
+//  u8g2_DrawCircle(&u8g2,24+a,20+32,5,U8G2_DRAW_ALL);
 }
 
 void u8g2_string(uint8_t a)
@@ -227,19 +227,19 @@ void u8g2_string(uint8_t a)
   u8g2_DrawStr(&u8g2,70+a,31, " 0");
   u8g2_SetFontDirection(&u8g2,1);
   u8g2_DrawStr(&u8g2,68,0+a, " 90");
-  u8g2_SetFontDirection(&u8g2,2);
-  u8g2_DrawStr(&u8g2,70-a,31, " 180");
-  u8g2_SetFontDirection(&u8g2,3);
-  u8g2_DrawStr(&u8g2,72,64-a, " 270");
+//  u8g2_SetFontDirection(&u8g2,2);
+//  u8g2_DrawStr(&u8g2,70-a,31, " 180");
+//  u8g2_SetFontDirection(&u8g2,3);
+//  u8g2_DrawStr(&u8g2,72,64-a, " 270");
 }
 
 void u8g2_line(uint8_t a)
 {
   u8g2_DrawStr(&u8g2, 0, 0, "DrawLine");
   u8g2_DrawLine(&u8g2,7+a, 15, 60-a, 60);
-  u8g2_DrawLine(&u8g2,7+a*2, 15, 80-a, 60);
-  u8g2_DrawLine(&u8g2,7+a*3, 15, 100-a, 60);
-  u8g2_DrawLine(&u8g2,7+a*4, 15, 120-a, 60);
+//  u8g2_DrawLine(&u8g2,7+a*2, 15, 80-a, 60);
+//  u8g2_DrawLine(&u8g2,7+a*3, 15, 100-a, 60);
+//  u8g2_DrawLine(&u8g2,7+a*4, 15, 120-a, 60);
 }
 
 void u8g2_hare(uint8_t a)
@@ -268,11 +268,11 @@ void draw(void)
 			u8g2_drawLogo();
 		break;
 		case 1:
-			max = 150;
+			max = 80;
 			u8g2_box_frame(step);
 		break;
 		case 2:
-			max = 150;
+			max = 70;
 			u8g2_disc_circle(step);
 		break;
 		case 3:

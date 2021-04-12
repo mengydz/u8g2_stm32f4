@@ -62,8 +62,8 @@ all: main-build
 main-build: u8g2_f4.elf secondary-outputs
 
 # Tool invocations
-u8g2_f4.elf: $(OBJS) $(USER_OBJS) F:\Desktop\u8g2_f4\STM32F407VETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "u8g2_f4.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"F:\Desktop\u8g2_f4\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="u8g2_f4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+u8g2_f4.elf: $(OBJS) $(USER_OBJS) D:\agv_project\u8g2_stm32f4\STM32F407VETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "u8g2_f4.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\agv_project\u8g2_stm32f4\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="u8g2_f4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

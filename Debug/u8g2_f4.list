@@ -39,11 +39,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_line   00023066  00000000  00000000  000cc25a  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000e3aca  00000000  00000000  000ef2c0  2**0
+ 18 .debug_str    000e3ad3  00000000  00000000  000ef2c0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000053  00000000  00000000  001d2d8a  2**0
+ 19 .comment      00000053  00000000  00000000  001d2d93  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  0000c1b0  00000000  00000000  001d2de0  2**2
+ 20 .debug_frame  0000c1b0  00000000  00000000  001d2de8  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -487,61 +487,61 @@ void MX_I2C1_Init(void)
 
   /* USER CODE END I2C1_Init 1 */
   hi2c1.Instance = I2C1;
- 800059c:	4b13      	ldr	r3, [pc, #76]	; (80005ec <MX_I2C1_Init+0x54>)
- 800059e:	4a14      	ldr	r2, [pc, #80]	; (80005f0 <MX_I2C1_Init+0x58>)
+ 800059c:	4b12      	ldr	r3, [pc, #72]	; (80005e8 <MX_I2C1_Init+0x50>)
+ 800059e:	4a13      	ldr	r2, [pc, #76]	; (80005ec <MX_I2C1_Init+0x54>)
  80005a0:	601a      	str	r2, [r3, #0]
-  hi2c1.Init.ClockSpeed = 10000;
- 80005a2:	4b12      	ldr	r3, [pc, #72]	; (80005ec <MX_I2C1_Init+0x54>)
- 80005a4:	f242 7210 	movw	r2, #10000	; 0x2710
- 80005a8:	605a      	str	r2, [r3, #4]
+  hi2c1.Init.ClockSpeed = 400000;
+ 80005a2:	4b11      	ldr	r3, [pc, #68]	; (80005e8 <MX_I2C1_Init+0x50>)
+ 80005a4:	4a12      	ldr	r2, [pc, #72]	; (80005f0 <MX_I2C1_Init+0x58>)
+ 80005a6:	605a      	str	r2, [r3, #4]
   hi2c1.Init.DutyCycle = I2C_DUTYCYCLE_2;
- 80005aa:	4b10      	ldr	r3, [pc, #64]	; (80005ec <MX_I2C1_Init+0x54>)
- 80005ac:	2200      	movs	r2, #0
- 80005ae:	609a      	str	r2, [r3, #8]
+ 80005a8:	4b0f      	ldr	r3, [pc, #60]	; (80005e8 <MX_I2C1_Init+0x50>)
+ 80005aa:	2200      	movs	r2, #0
+ 80005ac:	609a      	str	r2, [r3, #8]
   hi2c1.Init.OwnAddress1 = 0;
- 80005b0:	4b0e      	ldr	r3, [pc, #56]	; (80005ec <MX_I2C1_Init+0x54>)
- 80005b2:	2200      	movs	r2, #0
- 80005b4:	60da      	str	r2, [r3, #12]
+ 80005ae:	4b0e      	ldr	r3, [pc, #56]	; (80005e8 <MX_I2C1_Init+0x50>)
+ 80005b0:	2200      	movs	r2, #0
+ 80005b2:	60da      	str	r2, [r3, #12]
   hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
- 80005b6:	4b0d      	ldr	r3, [pc, #52]	; (80005ec <MX_I2C1_Init+0x54>)
- 80005b8:	f44f 4280 	mov.w	r2, #16384	; 0x4000
- 80005bc:	611a      	str	r2, [r3, #16]
+ 80005b4:	4b0c      	ldr	r3, [pc, #48]	; (80005e8 <MX_I2C1_Init+0x50>)
+ 80005b6:	f44f 4280 	mov.w	r2, #16384	; 0x4000
+ 80005ba:	611a      	str	r2, [r3, #16]
   hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
- 80005be:	4b0b      	ldr	r3, [pc, #44]	; (80005ec <MX_I2C1_Init+0x54>)
- 80005c0:	2200      	movs	r2, #0
- 80005c2:	615a      	str	r2, [r3, #20]
+ 80005bc:	4b0a      	ldr	r3, [pc, #40]	; (80005e8 <MX_I2C1_Init+0x50>)
+ 80005be:	2200      	movs	r2, #0
+ 80005c0:	615a      	str	r2, [r3, #20]
   hi2c1.Init.OwnAddress2 = 0;
- 80005c4:	4b09      	ldr	r3, [pc, #36]	; (80005ec <MX_I2C1_Init+0x54>)
- 80005c6:	2200      	movs	r2, #0
- 80005c8:	619a      	str	r2, [r3, #24]
+ 80005c2:	4b09      	ldr	r3, [pc, #36]	; (80005e8 <MX_I2C1_Init+0x50>)
+ 80005c4:	2200      	movs	r2, #0
+ 80005c6:	619a      	str	r2, [r3, #24]
   hi2c1.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
- 80005ca:	4b08      	ldr	r3, [pc, #32]	; (80005ec <MX_I2C1_Init+0x54>)
- 80005cc:	2200      	movs	r2, #0
- 80005ce:	61da      	str	r2, [r3, #28]
+ 80005c8:	4b07      	ldr	r3, [pc, #28]	; (80005e8 <MX_I2C1_Init+0x50>)
+ 80005ca:	2200      	movs	r2, #0
+ 80005cc:	61da      	str	r2, [r3, #28]
   hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
- 80005d0:	4b06      	ldr	r3, [pc, #24]	; (80005ec <MX_I2C1_Init+0x54>)
- 80005d2:	2200      	movs	r2, #0
- 80005d4:	621a      	str	r2, [r3, #32]
+ 80005ce:	4b06      	ldr	r3, [pc, #24]	; (80005e8 <MX_I2C1_Init+0x50>)
+ 80005d0:	2200      	movs	r2, #0
+ 80005d2:	621a      	str	r2, [r3, #32]
   if (HAL_I2C_Init(&hi2c1) != HAL_OK)
- 80005d6:	4805      	ldr	r0, [pc, #20]	; (80005ec <MX_I2C1_Init+0x54>)
- 80005d8:	f003 fc12 	bl	8003e00 <HAL_I2C_Init>
- 80005dc:	4603      	mov	r3, r0
- 80005de:	2b00      	cmp	r3, #0
- 80005e0:	d001      	beq.n	80005e6 <MX_I2C1_Init+0x4e>
+ 80005d4:	4804      	ldr	r0, [pc, #16]	; (80005e8 <MX_I2C1_Init+0x50>)
+ 80005d6:	f003 fc13 	bl	8003e00 <HAL_I2C_Init>
+ 80005da:	4603      	mov	r3, r0
+ 80005dc:	2b00      	cmp	r3, #0
+ 80005de:	d001      	beq.n	80005e4 <MX_I2C1_Init+0x4c>
   {
     Error_Handler();
- 80005e2:	f000 fb09 	bl	8000bf8 <Error_Handler>
+ 80005e0:	f000 fb0a 	bl	8000bf8 <Error_Handler>
   }
   /* USER CODE BEGIN I2C1_Init 2 */
 
   /* USER CODE END I2C1_Init 2 */
 
 }
- 80005e6:	bf00      	nop
- 80005e8:	bd80      	pop	{r7, pc}
- 80005ea:	bf00      	nop
- 80005ec:	200004d8 	.word	0x200004d8
- 80005f0:	40005400 	.word	0x40005400
+ 80005e4:	bf00      	nop
+ 80005e6:	bd80      	pop	{r7, pc}
+ 80005e8:	200004d8 	.word	0x200004d8
+ 80005ec:	40005400 	.word	0x40005400
+ 80005f0:	00061a80 	.word	0x00061a80
 
 080005f4 <HAL_I2C_MspInit>:
 

@@ -49,7 +49,7 @@ C_SRCS += \
 ../Core/Src/u8g2/u8x8_d_sh1108.c \
 ../Core/Src/u8g2/u8x8_d_sh1122.c \
 ../Core/Src/u8g2/u8x8_d_ssd1305.c \
-../Core/Src/u8g2/u8x8_d_ssd1306_128x32.c \
+../Core/Src/u8g2/u8x8_d_ssd1306_128x32_noname.c \
 ../Core/Src/u8g2/u8x8_d_ssd1306_128x64_noname.c \
 ../Core/Src/u8g2/u8x8_d_ssd1306_48x64.c \
 ../Core/Src/u8g2/u8x8_d_ssd1306_64x32.c \
@@ -140,7 +140,7 @@ OBJS += \
 ./Core/Src/u8g2/u8x8_d_sh1108.o \
 ./Core/Src/u8g2/u8x8_d_sh1122.o \
 ./Core/Src/u8g2/u8x8_d_ssd1305.o \
-./Core/Src/u8g2/u8x8_d_ssd1306_128x32.o \
+./Core/Src/u8g2/u8x8_d_ssd1306_128x32_noname.o \
 ./Core/Src/u8g2/u8x8_d_ssd1306_128x64_noname.o \
 ./Core/Src/u8g2/u8x8_d_ssd1306_48x64.o \
 ./Core/Src/u8g2/u8x8_d_ssd1306_64x32.o \
@@ -231,7 +231,7 @@ C_DEPS += \
 ./Core/Src/u8g2/u8x8_d_sh1108.d \
 ./Core/Src/u8g2/u8x8_d_sh1122.d \
 ./Core/Src/u8g2/u8x8_d_ssd1305.d \
-./Core/Src/u8g2/u8x8_d_ssd1306_128x32.d \
+./Core/Src/u8g2/u8x8_d_ssd1306_128x32_noname.d \
 ./Core/Src/u8g2/u8x8_d_ssd1306_128x64_noname.d \
 ./Core/Src/u8g2/u8x8_d_ssd1306_48x64.d \
 ./Core/Src/u8g2/u8x8_d_ssd1306_64x32.d \
@@ -367,8 +367,8 @@ Core/Src/u8g2/u8x8_d_sh1122.o: ../Core/Src/u8g2/u8x8_d_sh1122.c Core/Src/u8g2/su
 	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/agv_project/u8g2_stm32f4/Core/Src/u8g2" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/u8g2/u8x8_d_sh1122.d" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 Core/Src/u8g2/u8x8_d_ssd1305.o: ../Core/Src/u8g2/u8x8_d_ssd1305.c Core/Src/u8g2/subdir.mk
 	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/agv_project/u8g2_stm32f4/Core/Src/u8g2" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/u8g2/u8x8_d_ssd1305.d" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
-Core/Src/u8g2/u8x8_d_ssd1306_128x32.o: ../Core/Src/u8g2/u8x8_d_ssd1306_128x32.c Core/Src/u8g2/subdir.mk
-	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/agv_project/u8g2_stm32f4/Core/Src/u8g2" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/u8g2/u8x8_d_ssd1306_128x32.d" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+Core/Src/u8g2/u8x8_d_ssd1306_128x32_noname.o: ../Core/Src/u8g2/u8x8_d_ssd1306_128x32_noname.c Core/Src/u8g2/subdir.mk
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/agv_project/u8g2_stm32f4/Core/Src/u8g2" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/u8g2/u8x8_d_ssd1306_128x32_noname.d" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 Core/Src/u8g2/u8x8_d_ssd1306_128x64_noname.o: ../Core/Src/u8g2/u8x8_d_ssd1306_128x64_noname.c Core/Src/u8g2/subdir.mk
 	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/agv_project/u8g2_stm32f4/Core/Src/u8g2" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/u8g2/u8x8_d_ssd1306_128x64_noname.d" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 Core/Src/u8g2/u8x8_d_ssd1306_48x64.o: ../Core/Src/u8g2/u8x8_d_ssd1306_48x64.c Core/Src/u8g2/subdir.mk

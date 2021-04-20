@@ -8,11 +8,11 @@
 #include "main.h"
 #include "stm32f4xx_hal.h"
 #include "u8g2/u8g2.h"
+#include "myiic.h"
 
 #define DEVICE_ADDRESS 	0x3C
 #define TX_TIMEOUT		100
 
-extern I2C_HandleTypeDef hi2c1;
 
 uint8_t u8x8_stm32_gpio_and_delay(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void *arg_ptr)
 {
@@ -69,7 +69,8 @@ uint8_t u8x8_byte_stm32_hw_i2c(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void 
 		buf_idx = 0;
 		break;
 	case U8X8_MSG_BYTE_END_TRANSFER:
-		if(HAL_I2C_Master_Transmit(&hi2c1, (DEVICE_ADDRESS << 1), buffer, buf_idx, TX_TIMEOUT) != HAL_OK) return 0;
+		MyIIC_Send_Bytes(buffer,buf_idx);
+//		if(HAL_I2C_Master_Transmit(&hi2c1, (DEVICE_ADDRESS << 1), buffer, buf_idx, TX_TIMEOUT) != HAL_OK) return 0;
 		break;
 	default:
 		return 0;
